@@ -13,22 +13,16 @@ Resources:
       AvailabilityZones:
         Fn::GetAZs: ''
       Instances:
-      - Ref: Ec2Instance1
+      - Ref: InstanceId1
       Listeners:
       - LoadBalancerPort: '80'
-        InstancePort:
-          Ref: WebServerPort
+        InstancePort: '80'
         Protocol: HTTP
       HealthCheck:
-        Target:
-          Fn::Join:
-          - ''
-          - - 'HTTP:'
-            - Ref: WebServerPort
-            - "/"
+        Target: HTTP:80/
         HealthyThreshold: '3'
         UnhealthyThreshold: '5'
         Interval: '30'
         Timeout: '5'
     SecurityGroups:
-      Ref: SGId
+      - Ref: SGId
