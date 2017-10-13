@@ -2,7 +2,7 @@
   "Parameters": {
     "Stage": "dev",
     "VPCCidrBlock": "172.31.0.0/16",
-    "KeyName": "admin_dx_handson",
+    "KeyName": "dx-handson",
     "InstanceType": "t2.nano"
   }
 }
