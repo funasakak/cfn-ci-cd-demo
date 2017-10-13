@@ -81,6 +81,14 @@ Resources:
         KeyName: !Ref KeyName
         InstanceType: !Ref InstanceType
 
+  ELB:
+    Type: AWS::CloudFormation::Stack
+    Properties:
+      TemplateURL: src/elb.yml
+      Parameters:
+        InstanceId1: !GetAtt Compute.Outputs.InstanceId
+        SGId: !GetAtt SG.Outputs.SGId
+        
 Outputs:
   PublicIp:
     Value: !GetAtt Compute.Outputs.PublicIp

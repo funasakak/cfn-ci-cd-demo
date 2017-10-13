@@ -102,3 +102,5 @@ Resources:
 Outputs:
   PublicIp:
     Value: !GetAtt EC2.PublicIp
+  InstanceId:
+    Value: !Ref EC2
