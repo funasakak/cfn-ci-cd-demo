@@ -6,12 +6,12 @@ Parameters:
     Type: String
   SGId:
     Type: String
+  SubnetId:
+    Type: String
 Resources:
   ElasticLoadBalancer:
     Type: AWS::ElasticLoadBalancing::LoadBalancer
     Properties:
-      AvailabilityZones:
-        Fn::GetAZs: ''
       Instances:
       - Ref: InstanceId1
       Listeners:
@@ -26,3 +26,5 @@ Resources:
         Timeout: '5'
       SecurityGroups:
       - Ref: SGId
+      Subnets:
+      - Ref: SubnetId

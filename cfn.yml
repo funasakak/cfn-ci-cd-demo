@@ -88,6 +88,7 @@ Resources:
       Parameters:
         InstanceId1: !GetAtt Compute.Outputs.InstanceId
         SGId: !GetAtt SG.Outputs.SGId
+        SubnetId: !GetAtt NW.Outputs.SubnetId
         
 Outputs:
   PublicIp:
