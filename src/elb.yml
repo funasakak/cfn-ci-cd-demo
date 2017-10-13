@@ -5,7 +5,7 @@ Parameters:
   InstanceId1:
     Type: String
   SGId:
-    default: Security Group Id
+    Type: String
 Resources:
   ElasticLoadBalancer:
     Type: AWS::ElasticLoadBalancing::LoadBalancer
