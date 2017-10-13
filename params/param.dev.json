@@ -1,8 +1,8 @@
 {
   "Parameters": {
     "Stage": "dev",
-    "VPCCidrBlock": "192.168.0.0/16",
-    "KeyName": "mykey",
+    "VPCCidrBlock": "172.31.0.0/16",
+    "KeyName": "admin_dx_handson",
     "InstanceType": "t2.nano"
   }
 }
